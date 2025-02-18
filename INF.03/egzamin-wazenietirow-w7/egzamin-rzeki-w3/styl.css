@@ -1,0 +1,60 @@
+*{
+    font-family:Georgia;
+    margin: 0;
+}
+#baner1{
+    background-color: navy;
+    color:white;
+    text-align: center;
+    height:100px;
+    width:50%;
+    float:left;
+}
+#baner2{
+    background-color: navy;
+    color:white;
+    text-align: center;
+    height:100px;
+    width:50%;
+    float:left;
+}
+#menu{
+    background-color: navy;
+    padding:20px;
+}
+.radio{
+    color:silver;
+    margin:50px;
+}
+.radio:hover{
+    color:white;
+    text-decoration: underline;
+}
+#lewy{
+    background-color: azure;
+    height:550px;
+    width:70%;
+    float:left;
+}
+#prawy{
+    background-color: azure;
+    height:550px;
+    width:30%;
+    float:left;
+}
+footer{
+    background-color: navy;
+    color:white;
+    clear:both;
+}
+table{
+    border: solid 1px navy;
+    margin:auto;
+    width:70%;
+}
+tr:hover{
+    background-color: skyblue;
+}
+#prawy > img{
+    width:90%;
+}

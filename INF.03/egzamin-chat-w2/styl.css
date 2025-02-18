@@ -1,0 +1,75 @@
+*{
+    font-family: Garamond;
+}
+header{
+    background-color: tomato;
+    color: white;
+    text-align: center;
+    height:80px;
+    width:80%;
+}
+main{
+    width:80%;
+    height:600px;
+    float:left;
+}
+aside{
+    background-color: coral;
+    width:20%;
+    height:680px;
+    float:left;
+    transform: translateY(-80px);
+}
+footer{
+    background-color: tomato;
+    color: white;
+    text-align: center;
+    clear:both;
+    transform: translateY(-80px);
+}
+img{
+    border-radius: 50%;
+    padding-left: 10px;
+    padding-right: 10px;
+    width:70px;
+    height:70px;
+
+}
+article{
+  margin:15px;
+  height:470px;
+  overflow: scroll;  
+}
+
+section{
+    border-radius: 5px;
+    width:90%;
+    height:70px;
+    margin:2%;
+    padding:3px;
+}
+.jola{
+
+    background-color: #EEE;
+    display: flex;
+    flex-direction: row;
+    gap:20px;
+}
+.krzysztof{
+    background-color: #ccc;
+    display: flex;
+    flex-direction: row-reverse;
+    gap:20px;
+}
+button{
+    background-color: tomato;
+    border:1px darkred;
+    padding:5px;
+    font-weight:bold;
+}
+input{
+    width:500px;
+}
+#logika{
+    transform: translateY(-30px);
+}

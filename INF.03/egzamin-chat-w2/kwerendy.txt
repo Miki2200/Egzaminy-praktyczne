@@ -1,0 +1,10 @@
+INSERT INTO logowanie (id,nick, haslo) SELECT id, 'Jeremi', 'Jer123' FROM uczestnicy WHERE imie = 'Jeremi' AND nazwisko = 'Kowalski';
+
+SELECT FLOOR(AVG(YEAR(dataUr))) AS "Średni_rok_urodzenia"
+FROM uczestnicy;
+
+SELECT uczestnicy.imie, uczestnicy.nazwisko, logowanie.nick, logowanie.haslo FROM uczestnicy, logowanie WHERE uczestnicy.id = logowanie.id AND uczestnicy.imie LIKE 'J%';
+
+CREATE USER 'uczestnik'@'localhost' IDENTIFIED BY 'Ucz123&';
+
+GRANT SELECT, UPDATE ON chat.uczestnicy TO 'uczestnik'@'localhost';

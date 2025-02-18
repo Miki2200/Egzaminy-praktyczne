@@ -1,0 +1,24 @@
+*{
+    font-family: helvetica;
+}
+#baner{
+    
+}
+
+
+
+Styl CSS zdefiniowany jest w całości w zewnętrznym pliku o nazwie styl.css. Cechy formatowania CSS,
+działające na stronie:
+‒ Domyślne formatowanie wszystkich selektorów: krój czcionki Helvetica
+‒ Wspólne dla banera i stopki: kolor tła SaddleBrown, biały kolor czcionki, wyrównanie tekstu do środka,
+marginesy wewnętrzne 7 px
+‒ Dla lewego bloku menu: kolor tła Peru, szerokość 80%, wysokość 40 px, margines wewnętrzny górny
+20 px
+‒ Dla lewego bloku głównego: szerokość 80%, wysokość 700 px, rozmiar czcionki 120%, paski
+przewijania pojawiające się tylko, gdy tekst nie mieści się w oknie
+‒ Dla bloku prawego: kolor tła Peru, biały kolor czcionki, szerokość 20%, wysokość 760 px
+‒ Dla selektora odnośnika: kolor czcionki #DDD, margines wewnętrzny lewy 90 px, rozmiar czcionki
+140%, brak podkreślenia
+‒ W momencie gdy kursor znajdzie się na odnośniku, jego kolor czcionki zmienia się na biały
+‒ Dla selektora obrazu: opływanie tekstem po prawej stronie (obraz znajduje się po lewej stronie),
+marginesy zewnętrzne 30 px

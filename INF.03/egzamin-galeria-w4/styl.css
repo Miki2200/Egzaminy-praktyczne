@@ -1,0 +1,74 @@
+*{
+    font-family: Helvetica;
+}
+#baner{
+    background-color: sienna;
+    color:white;
+    padding: 10px;
+    text-align: center;
+}
+footer{
+    background-color: sienna;
+    color:white;
+    padding: 10px;
+    text-align: center;
+    clear:both;
+}
+#lewy{
+    background-color: NavajoWhite;
+    width:15%;
+    height: 700px;
+    float:left;
+}
+#prawy{
+    background-color: NavajoWhite;
+    width:15%;
+    height: 700px;
+    float:left;
+}
+#srodek{
+    width:70%;
+    height:700px;
+    overflow: scroll;
+    float:left;
+}
+img{
+    width:100%;
+}
+#grafiki > h3 {
+    position:absolute;
+    top:5%;
+    opacity:0;
+}
+#grafiki > p {
+    position:absolute;
+    top:30%;;
+    opacity:0;
+}
+#grafiki > a {
+    position:absolute;
+    top:70%;
+    left:70%;
+    opacity:0;
+    background-color: sienna;
+    padding:15px;
+}
+#grafiki{
+    width:46%;
+    margin:2%;
+    position:relative;
+    float:left;
+}
+#grafiki:hover > img{
+    opacity:0.3;
+    transition: opacity 0.5s ease;
+}
+#grafiki:hover > h3{
+    opacity:1;
+}
+#grafiki:hover > p{
+    opacity:1;
+}
+#grafiki:hover > a{
+    opacity:1;
+}

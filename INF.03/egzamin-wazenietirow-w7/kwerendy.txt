@@ -1,0 +1,7 @@
+UPDATE wagi SET dzien=CURRENT_DATE, czas=CURRENT_TIME WHERE lokalizacje_id IN (2,3,4);
+
+SELECT ulica FROM lokalizacje;
+
+INSERT INTO wagi(lokalizacje_id, waga, rejestracja,dzien,czas) VALUES (5,FLOOR(1+RAND()*10),'DW12345',CURRENT_DATE,CURRENT_TIME);
+
+SELECT w.rejestracja, w.waga, w.dzien, w.czas, l.ulica FROM wagi as w, lokalizacje as l WHERE w.lokalizacje_id=l.id AND w.waga > 5;

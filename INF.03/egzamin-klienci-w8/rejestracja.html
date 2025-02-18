@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sklep - rejestracja</title>
+    <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+    <aside id="lewy">
+        <img src="obraz.png" alt="promocje">
+        <h2>Sprawdź promocje</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>co?</th>
+                    <th>ile taniej?</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>ubrania</td>
+                    <td>15%</td>
+                </tr>
+                <tr>
+                    <td>buty</td>
+                    <td>25%</td>
+                </tr>
+            </tbody>
+        </table>
+    </aside>
+    <header id="baner">
+        <h1>Zarejestruj się w sklepie</h1>
+    </header>
+    <main id="glowny">
+        <button onclick="skrypt(1)">Klient</button>
+        <button onclick="skrypt(2)">Adres</button>
+        <button onclick="skrypt(3)">Kontakt</button>
+        <section id="blok1" class="blok active">
+            <p>Imię</p>
+            <input type="text" placeholder="Wpisz dane..." id="imie">
+            <p>Nazwisko</p>
+            <input type="text" id="nazwisko">
+            <p>Data urodzenia</p>
+            <input type="date" id="data-ur">
+        </section>
+        <section id="blok2" class="blok">
+            <p>Ulica</p>
+            <input type="text" id="ulica">
+            <p>Numer</p>
+            <input type="number" id="numer">
+            <p>Miasto</p>
+            <input type="text" id="miasto">
+        </section>
+        <section id="blok3" class="blok">
+            <p>Numer komórkowy</p>
+            <input type="tel" id="telefon">
+            <p><input type="checkbox" id="rodo">Akceptuję RODO</p>
+            
+            <button type="submit" onclick="zatwierdz()" class="zatw">Zatwierdź dane</button>
+        </section>
+    </main>
+    <section class="pasek">
+        <article id="postep"></article>
+    </section>
+    <footer><h4>Rejestrację sklepu wykonał: 87542930</h4></footer>
+    <script>
+        $$ = function(id){
+            return document.getElementById(id);
+        }
+        function skrypt(blokNumber){
+            document.querySelectorAll('.blok').forEach(blok =>{
+                blok.classList.remove('active');
+            });
+            $$('blok'+blokNumber).classList.add('active');
+        }
+        let width=4;
+        function progress(){
+            const pasek = $$('postep');
+            width+=12;
+            if(width>100){
+                width=100;
+            }
+            postep.style.width = width + '%';
+        }
+        document.querySelectorAll('input').forEach(input =>{
+            input.addEventListener('blur', progress)
+        })
+        function zatwierdz(){
+            var imie = $$('imie').value;
+            var nazwisko = $$('nazwisko').value;
+            var data = $$('data-ur').value;
+            var ulica = $$('ulica').value;
+            var numer = $$('numer').value;
+            var miasto = $$('miasto').value;
+            var telefon = $$('telefon').value;
+            var rodo = $$('rodo').value;
+            console.log(imie+","+nazwisko+","+data+","+ulica+","+numer+","+miasto+","+telefon+","+rodo);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rejestracja</title>
+    <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+    <header id="baner">
+        <h1>Formularz rejestracyjny konferencji <em>Nasze Kwiaty</em></h1>
+    </header>
+    <main id="glowny">
+        <section id="blok1">
+            <h2>Dane osobowe</h2>
+            <input type="text" placeholder="Wpisz imię..." id="imie" required>
+            <input type="text" placeholder="Wpisz nazwisko..." id="nazwisko" required>
+            <button type="button" onclick="skrypt(0)">Następna karta</button>
+        </section>
+        <section id="blok2">
+            <h2>Dane kontaktowe</h2>
+            <input type="email" placeholder="Wpisz email..." id="email">
+            <input type="tel" placeholder="Twój numer telefonu..." id="tel">
+            <button type="button" onclick="skrypt(1)">Następna karta</button>
+        </section>
+        <section id="blok3">
+            <h2>Hasło do logowania</h2>
+            <input type="password" placeholder="Podaj hasło" id="haslo1">
+            <input type="password" placeholder="Powtórz hasło" id="haslo2">
+            <button type="button" onclick="Zatwierdź()">Zatwierdź</button>
+        </section>
+    </main>
+    <footer>
+        <section id="stopka">
+            <video controls>
+                <source src="motyl.mp4" type="video/mp4">
+                Przeglądarka nie obsługuje tego formatu
+            </video>
+        </section>
+        <section id="stopka">
+            <h3>Plan konferencji</h3>
+            <table>
+                <tr>
+                    <td>9:00 - 12:00</td>
+                    <td>Pielęgnacja roślin</td>
+                </tr>
+                <tr>
+                    <td>13:00 - 15:00</td>
+                    <td>Targi kwiatowe</td>
+                </tr>
+            </table>
+        </section>
+        <section id="stopka">
+            <p><a href="https://kwiaty.pl/">Internetowa kwiaciarnia</a></p>
+        </section>
+        <section id="stopka">Formularz wykonał: 9432032840</section>
+    </footer>
+    <script>
+        $$ = function(id){
+           return document.getElementById(id);
+        }
+        var bloki = [];
+        function dodajBloki(){
+            bloki.push($$('blok1'));
+            bloki.push($$('blok2'));
+            bloki.push($$('blok3'));
+        }
+
+        window.onload = function() {
+            dodajBloki();
+        };
+        function skrypt(indeks) {
+            bloki.forEach(function(blok, i) {
+                if (i === indeks+1) {
+                    blok.style.display = 'block';
+                } else {
+                    blok.style.display = 'none';
+                }
+            });
+        }
+        function Zatwierdź(){
+           var pole1 = $$('haslo1').value;
+           var pole2 = $$('haslo2').value;
+           var imie = $$('imie').value;
+           var nazwisko = $$('nazwisko').value;
+
+           if(pole1 != pole2){
+               alert('Podane hasła różnią się');
+           } else {
+               console.log('Witaj ' + imie + ' ' + nazwisko);
+           }
+        }
+    </script>
+</body>
+</html>
